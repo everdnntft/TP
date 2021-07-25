@@ -9,3 +9,7 @@
 | Row Header 4 |  Row            |  Each cell     |:   Centered   :| Right-aligned :|: Left-aligned  |
 |.            .|. with multiple .|. has room for .|.  multi-line  .|.   multi-line .|. multi-line   .|
 |.            .|. lines.        .|. more text.   .|.     text.    .|.        text. .|. text.        .|
+
+| foo | bar |<    | <<< |
+| --- |-----|-    |    -|
+| baz |<<<<<|    <| quz |
