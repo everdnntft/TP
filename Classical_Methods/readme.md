@@ -1,14 +1,15 @@
 <table>
     <thead>
         <tr>
-            <th colspan=2>Layer 1</th>
-            <th>Layer 2</th>
+            <th colspan=2>구분(Method)</th>
+            <th>응용문제(Task)</th>
+            <th>참조</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td rowspan=4>L1 Name</td>
-            <td rowspan=2>L2 Name A</td>
+            <td rowspan=1>통계 모델링</td>
+            <td rowspan=3>기계학습 모델링</td>
             <td>L3 Name A</td>
         </tr>
         <tr>
