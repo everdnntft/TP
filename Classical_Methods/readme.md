@@ -8,6 +8,7 @@
 :              :  with multiple  :  has room for  :   multi-line   :    multi-line  :  multi-line    :
 :              :  lines.         :  more text.    :      text.     :         text.  :  text.         :
 |--------------|-----------------|----------------|----------------|----------------|----------------|
+[Caption Text]
 
 구분(Method) | 응용문제(Task)
 ------------ | ------------
