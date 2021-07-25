@@ -1,9 +1,9 @@
-|             |          Grouping           ||
-First Header  | Second Header | Third Header |
- ------------ | :-----------: | -----------: |
-Content       |          *Long Cell*        ||
-Content       |   **Cell**    |         Cell |
-
-New section   |     More      |         Data |
-And more      | With an escaped '\|'         ||  
-[Prototype table]
+| Main Header Cell||||
+| Sub Header Cell || Sub Header Cell ||
+| Name | Name | Name | Name |
+| --- | --- | --- | --- |
+| Cell | Cell | Cell | Cell |
+| Cell | Cell | Cell | Cell |
+| Cell | Cell | Cell | Cell |
+| Cell | Cell | Cell | Cell |
+[*Caption*]
