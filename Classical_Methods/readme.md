@@ -8,7 +8,7 @@
     </thead>
     <tbody>
         <tr>
-            <td rowspan=1>통계 모델링</td>
+            <td colspan=2>통계 모델링</td>
             <td rowspan=2>Flow<br>Demend</td>
             <td>L3 Name A</td>
         </tr>
