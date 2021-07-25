@@ -14,9 +14,9 @@
         </tr>
         <tr>
             <td rowspan=3>기계학습 모델링</td>
-            <td>속성 기반 모델</td>
-            <td>가우시안 프로세스 모델</td>
-            <td>상태 공간 </td>
+            <tr>속성 기반 모델</td>
+            <tr>가우시안 프로세스 모델</td>
+            <tr>상태 공간 </td>
         </tr>
         <tr>
             <td>L3 Name D</td>
