@@ -1,10 +1,5 @@
-|Caption Text| Header 1        | Header 2                       |-| Header 3                       |-|
-|              | Subheader 1     | Subheader 2.1  | Subheader 2.2  | Subheader 3.1  | Subheader 3.2  |
-|==============|-----------------|----------------|----------------|----------------|----------------|
-| Row Header 1 | 3row, 3col span                                 ||| Colspan only                   ||
-| Row Header 2 |       ^                                         ||| Rowspan only   | Cell           |
-| Row Header 3 |       ^                                         |||       ^        | Cell           |
-| Row Header 4 |  Row            |  Each cell     |:   Centered   :| Right-aligned :|: Left-aligned  |
-:              :  with multiple  :  has room for  :   multi-line   :    multi-line  :  multi-line    :
-:              :  lines.         :  more text.    :      text.     :         text.  :  text.         :
-|--------------|-----------------|----------------|----------------|----------------|----------------|
+|  <center>Header1</center> |  <center>Header2</center> |  <center>Header3</center> |
+|:--------|:--------:|--------:|
+|**cell 1x1** | <center>cell 1x2 </center> |*cell 1x3* |
+|**cell 2x1** | <center>cell 2x2 </center> |*cell 2x3* |
+|**cell 3x1** | <center>cell 3x2 </center> |*cell 3x3* |
