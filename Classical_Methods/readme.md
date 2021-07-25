@@ -1,24 +1,3 @@
-<table>
-<thead>
-<tr>
-<th colspan="4">Main Header Cell</th>
-</tr>
-<tr>
-<th colspan="2">Sub Header Cell</th>
-<th colspan="2">Sub Header Cell</th>
-</tr>
-<tr>
-<th>Name</th>
-<th>Name</th>
-<th>Name</th>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
-</tr>
-<tr>
+| One    | Two | Three | Four    | Five  | Six 
+| -
+| Span <td colspan=3>triple  <td colspan=2>double
