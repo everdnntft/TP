@@ -1,15 +1,6 @@
-|######################################## Caption Text ##########################################
-|_______________________________________________________________________________________________,
-|              | Header 1      || Header 2                     || Header 3                      |
-|              | Subheader 1   | Subheader 2.1 | Subheader 2.2 |  Subheader 3.1 | Subheader 3.2 |
-|==============|---------------|---------------|---------------|----------------|---------------|
-| Row Header 1 ||| 3row, 3col span                             || Colspan only                  |
-|______________|                                               |________________|_______________|
-| Row Header 2 |^                                              |  Rowspan only  | Cell          |
-|______________|                                               |                |_______________|
-| Row Header 3 |^                                              |^               | Cell          |
-|______________|_______________________________________________|________________|_______________|
-| Row Header 4 | Row           | Each cell     |:   Centered  :| Right-aligned :|: Left-aligned |
-|~             | with multiple | has room for  |   multi-line  |    multi-line  |  multi-line   |
-|~             | lines.        | more text.    |      text.    |         text.  |  text.        |
-|______________|_______________|_______________|_______________|________________|_______________/
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+| <ul><li>item1</li><li>item2</li></ul>| See the list | from the first column|
