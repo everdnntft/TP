@@ -15,12 +15,15 @@
         <tr>
             <td rowspan=3>기계학습 모델링</td>
             <td>속성 기반 모델</td>
+            <td>Flow<br>Demand</td>
         </tr>
         <tr>
             <td>가우시안 프로세스 모델</td>
+            <td>Flow<br>Speed<br>Demand<br>Occupancy</td>
         </tr>
         <tr>
             <td>상태 공간</td>
+            <td>Flow<br>Speed<br>Demand<br>Travel Time<br>Occupancy</td>
         </tr>
     </tbody>
 </table>
