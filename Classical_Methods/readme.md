@@ -42,6 +42,9 @@
     - https://m.blog.naver.com/bluefish850/220749045909
     
 ## 2. 기계학습 모델링 설명 참조
-### SVR (Support Vector Regression)
-        - https://leejiyoon52.github.io/Support-Vecter-Regression/
+#### SVR (Support Vector Regression)
+    - https://leejiyoon52.github.io/Support-Vecter-Regression/
+
+#### RF Regression (Random Forest)
+    - https://hororolol.tistory.com/208
     
