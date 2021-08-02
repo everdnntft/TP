@@ -38,5 +38,5 @@
     </tbody>
 </table>
 
-## 1. 통계모델링 설명 참조
+## 1. 시계열 통계 모델링 설명 참조
     - https://m.blog.naver.com/bluefish850/220749045909
