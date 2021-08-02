@@ -45,6 +45,6 @@
 #### SVR (Support Vector Regression)
     - https://leejiyoon52.github.io/Support-Vecter-Regression/
 
-#### RF Regression (Random Forest)
+#### RFR (Random Forest Regression)
     - https://hororolol.tistory.com/208
     
