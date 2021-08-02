@@ -35,3 +35,28 @@
   - tf.keras.utils.Sequence 사용법
     - https://www.tensorflow.org/api_docs/python/tf/keras/utils/Sequence
     - http://www.kwangsiklee.com/tag/model-fit_generator/
+    - 코드 부연 설명
+      <pre>
+      <code>
+      class DataGenerator(Sequence):
+        def __init__(self, ....):
+          ....
+          # file_path, file_idx, batch_size, Shuffle 여부 등의 모델의 Input 들어갈 정보 세팅
+          
+        def __len__(self):
+          ....
+          # Generator는 total train/valid/test size를 알려주지 않으면, 스스로 알지 못합니다.
+          # Total Size를 모르면 몇 step(total_size / batchsize)을 돌아야 1 epoch이 되는지 알지 못합니다.
+          # 따라서 개발자는 미리 데이터의 total_size를 알아야하고, 해당 method의 output으로 step 수를 return 합니다.
+            
+        def __getitem__(self, index):
+          ....
+          # 학습데이터와 정답데이터를 batch_size만큼 생성해 return 합니다.
+        
+        def on_epoch_end(self):
+          ....
+          # __len__() Method에서 정의한 step 수 만큼 돌면 1 epoch가 끝난 것이고, 1 epoch가 끝났을 때, 해당 함수가 호출됩니다.
+          # 해당 함수는 return값은 없으며, 보통 file_idx를 shuffle하여, 다음 epoch에서의 학습 순서를 변경해줍니다.
+          
+      </code>
+      </pre>
