@@ -23,7 +23,7 @@
             <td rowspan=3>기계학습 모델링</td>
             <td>속성 기반 모델</td>
             <td>Flow<br>Demand</td>
-            <td>추가예정2</td>
+            <td>SVR</td>
         </tr>
         <tr>
             <td>가우시안 프로세스 모델</td>
@@ -40,3 +40,8 @@
 
 ## 1. 시계열 통계 모델링 설명 참조
     - https://m.blog.naver.com/bluefish850/220749045909
+    
+## 2. 기계학습 모델링 설명 참조
+    a. SVR (Support Vector Regression)
+        - https://leejiyoon52.github.io/Support-Vecter-Regression/
+    
