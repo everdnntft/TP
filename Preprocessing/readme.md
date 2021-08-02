@@ -1,6 +1,6 @@
 ##### 아래 기법 모두 데이터 Load와 전처리를 모두 같이 진행 할 수 있지만, 1차적인 가공정도는 먼저 해놓는 것을 추천
 
-### Dataset
+## Dataset
 
 - 모델에 넣을 학습데이터를 효율적으로 가져오기 위한 기법 중 하나
 - Pipeline 구축을 통해 cpu 사용량과 gpu 사용량 스케쥴링 가능
@@ -11,7 +11,7 @@
   - https://www.tensorflow.org/guide/data_performance?hl=ko
 
 
-### Generator
+## Generator
 
 - Dataset과 마찬가지로 큰 데이터를 학습 시킬 때 사용
 - 사용법은 yield Method를 사용하는 방법과 tf.keras.utils.Sequence를 사용하는 방법이 있다.
@@ -52,6 +52,7 @@
         def __getitem__(self, index):
           ....
           # 학습데이터와 정답데이터를 batch_size만큼 생성해 return 합니다.
+          # 해당 데이터로 모델이 학습됩니다.
         
         def on_epoch_end(self):
           ....
