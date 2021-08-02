@@ -38,7 +38,7 @@
     - 코드 부연 설명
       <pre>
       <code>
-      class DataGenerator(Sequence):
+      class DataGenerator(tf.keras.utils.Sequence):
         def __init__(self, ....):
           ....
           # file_path, file_idx, batch_size, Shuffle 여부 등의 모델의 Input 들어갈 정보 세팅
