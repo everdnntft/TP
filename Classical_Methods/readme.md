@@ -10,14 +10,14 @@
         <tr>
             <th colspan=2>구분(Method)</th>
             <th>응용문제(Task)</th>
-            <th>참조</th>
+            <th>기법</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td colspan=2>통계 모델링</td>
             <td>Flow<br>Demend</td>
-            <td>추가예정1</td>
+            <td>ARMA, ARIMA, 포아송 분포 모델</td>
         </tr>
         <tr>
             <td rowspan=3>기계학습 모델링</td>
@@ -37,3 +37,5 @@
         </tr>
     </tbody>
 </table>
+
+통계모델링 설명 참조 : https://m.blog.naver.com/bluefish850/220749045909
