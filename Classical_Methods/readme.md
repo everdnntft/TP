@@ -42,6 +42,6 @@
     - https://m.blog.naver.com/bluefish850/220749045909
     
 ## 2. 기계학습 모델링 설명 참조
-    a. SVR (Support Vector Regression)
+### SVR (Support Vector Regression)
         - https://leejiyoon52.github.io/Support-Vecter-Regression/
     
