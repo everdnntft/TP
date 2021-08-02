@@ -23,7 +23,7 @@
             <td rowspan=3>기계학습 모델링</td>
             <td>속성 기반 모델</td>
             <td>Flow<br>Demand</td>
-            <td>SVR, RFR</td>
+            <td>SVR, RFR, GBR</td>
         </tr>
         <tr>
             <td>가우시안 프로세스 모델</td>
