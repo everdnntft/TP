@@ -48,3 +48,6 @@
 #### RFR (Random Forest Regression)
     - https://hororolol.tistory.com/208
     
+#### GBR (Gradient Boosting Regression)
+    - https://3months.tistory.com/368
+    
