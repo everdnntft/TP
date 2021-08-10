@@ -13,23 +13,20 @@ class AttentionLayer(Layer):
     def build(self, input_shape):
         assert len(input_shape)==2
 
-        self.W_0 = self.add_weight(name='att_weight0',
+        self.W_query = self.add_weight(name='att_weight0',
                                  shape=(input_shape[0][1], input_shape[0][1]),
                                  initializer='uniform',
                                  trainable=True)
-        self.W_1 = self.add_weight(name='att_weight1',
+        self.W_key = self.add_weight(name='att_weight1',
                                  shape=(input_shape[1][2], input_shape[1][1]),
                                  initializer='uniform',
                                  trainable=True)
 
-        self.W_2 = self.add_weight(name='att_weight2',
+        self.W_value = self.add_weight(name='att_weight2',
                                    shape=(input_shape[0][1], input_shape[0][1]),
                                    initializer='uniform',
                                    trainable=True)
-        # self.b = self.add_weight(name='att_bias',
-        #                          shape=(input_shape[0][1],),
-        #                          initializer='uniform',
-        #                          trainable=True)
+        
         super(AttentionLayer, self).build(input_shape)
 
     def call(self, inputs):
@@ -37,8 +34,8 @@ class AttentionLayer(Layer):
         x1 = K.permute_dimensions(inputs[0], (0, 1))
         x2 = K.permute_dimensions(inputs[1][:,-1,:], (0, 1))
         # x.shape = (batch_size, seq_len, time_steps)
-        a = K.softmax(K.tanh(K.dot(x1, self.W_0)+ K.dot(x2, self.W_1)))
-        a = K.dot(a, self.W_2)
+        a = K.softmax(K.tanh(K.dot(x1, self.W_query)+ K.dot(x2, self.W_key)))
+        a = K.dot(a, self.W_value)
         outputs = K.permute_dimensions(a * x1, (0, 1))
         # outputs = K.sum(outputs, axis=1)
         outputs = K.l2_normalize(outputs, axis=1)
