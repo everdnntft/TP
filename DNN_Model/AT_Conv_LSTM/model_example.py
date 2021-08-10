@@ -13,16 +13,16 @@ class AttentionLayer(Layer):
     def build(self, input_shape):
         assert len(input_shape)==2
 
-        self.W_query = self.add_weight(name='att_weight0',
+        self.W_query = self.add_weight(name='att_weight_query',
                                  shape=(input_shape[0][1], input_shape[0][1]),
                                  initializer='uniform',
                                  trainable=True)
-        self.W_key = self.add_weight(name='att_weight1',
+        self.W_key = self.add_weight(name='att_weight_key',
                                  shape=(input_shape[1][2], input_shape[1][1]),
                                  initializer='uniform',
                                  trainable=True)
 
-        self.W_value = self.add_weight(name='att_weight2',
+        self.W_value = self.add_weight(name='att_weight_value',
                                    shape=(input_shape[0][1], input_shape[0][1]),
                                    initializer='uniform',
                                    trainable=True)
