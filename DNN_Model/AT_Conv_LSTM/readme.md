@@ -10,4 +10,5 @@
 
 
 #### 3. 모델 구조
+![image](https://user-images.githubusercontent.com/87812424/128858004-b4dbdac8-aed0-4481-97df-cb506acfd0cc.png)
 
