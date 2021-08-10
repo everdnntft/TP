@@ -24,10 +24,14 @@
 ![image](https://user-images.githubusercontent.com/87812424/128858004-b4dbdac8-aed0-4481-97df-cb506acfd0cc.png)
 ![image](https://user-images.githubusercontent.com/87812424/128858098-3a8111c3-3df1-4ac9-b855-7df8b9b45259.png)
  - [Fig1]
-   - Conv_LSTM Input : 현재 속도 데이터
-   - Bi-LSTM Input : 일별 패턴
-   - bi-LSTM input : 주별 패턴
+   - Input
+     - Conv_LSTM Input : 현재 속도 데이터
+     - Bi-LSTM Input : 일별 패턴
+     - bi-LSTM input : 주별 패턴
+   - 각 module의 output을 concat하고, FFLayer 걸쳐 최종 예측 데이터 생성
  - [Fig2]
-   - 
+   - Convolution Layer의 output과 LSTM의 마지막 step의 output으로 attention vector 생성 후 nomalize
+   - nomalize된 attention vector를 LSTM의 각 step의 output에 element wise하게 multiply
+   - 각 step의 위 결과를 모두 add하여 최종 ouput 생성
 
 
