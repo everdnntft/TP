@@ -11,6 +11,7 @@
 
 #### 2. 개요
  - Traffic Frocasting을 위하여, [속도, 일별 패턴, 주별 패턴] 데이터를 사용하여, 미래 Traffic을 예측합니다.
+   - 1DCNN, LSTM, Attention  
 
 
 #### 3. 모델 구조
