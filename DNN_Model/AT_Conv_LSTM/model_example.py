@@ -32,11 +32,9 @@ class AttentionLayer(Layer):
     def call(self, inputs):
         x1 = inputs[0]
         x2 = inputs[1]
-
         a = K.softmax(K.tanh(K.dot(x1, self.W_query)+ K.dot(x2, self.W_key)))
         a = K.dot(a, self.W_value)
         outputs = a * x1
-       
         outputs = K.l2_normalize(outputs, axis=1)
         
         return outputs
