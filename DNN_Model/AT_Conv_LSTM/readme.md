@@ -31,10 +31,10 @@
    - 각 module의 output을 concat하고, FF Layer 걸쳐 최종 예측 데이터 생성
  - [Fig2]
    - attention vector
-     - Convolution Layer의 output (None, 15, 105)
-     - LSTM의 output (None, 15, 15)
-     - 위 두 tensor를 사용하여, 각 Time Step(axis=1) 별로 attention vector 생성 후 normalize
-   - 각 step 별 attention vector를 LSTM의 각 step 별 output에 element wise하게 multiply
-   - 각 step의 위 결과를 모두 add하여 Conv_lstm의 ouput 생성
+     - Convolution Layer의 output -> shape (None, 15, 105)
+     - LSTM의 output -> shape (None, 15, 15)
+     - 위 두 tensor를 사용하여, 각 Time Step(axis=1) 별로 attention vector 생성 후 normalize -> shape (None, 15, 15) 
+   - 각 step 별 attention vector를 LSTM의 각 step 별 output에 element wise하게 multiply -> shape (None, 15, 15)
+   - 각 step의 위 결과를 모두 add하여 Conv_lstm의 ouput 생성 -> shape (None, 15)
 
 
