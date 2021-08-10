@@ -33,7 +33,7 @@ class AttentionLayer(Layer):
         x1 = K.permute_dimensions(inputs[0], (0, 1))
         x2 = K.permute_dimensions(inputs[1][:,-1,:], (0, 1))
 
-        a = K.softmax(K.tanh(K.dot(x1, self.W_query)+ K.dot(x2, self.W_key)))
+        a = K.softmax(K.tanh(K.dot(x1, self.W_query) + K.dot(x2, self.W_key)))
         a = K.dot(a, self.W_value)
         outputs = K.permute_dimensions(a * x1, (0, 1))
        
