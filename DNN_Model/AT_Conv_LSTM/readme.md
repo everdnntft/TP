@@ -28,7 +28,7 @@
      - Conv_LSTM Input : 현재 속도 데이터
      - Bi-LSTM Input : 일별 패턴
      - bi-LSTM input : 주별 패턴
-   - 각 module의 output을 concat하고, FFLayer 걸쳐 최종 예측 데이터 생성
+   - 각 module의 output을 concat하고, FF Layer 걸쳐 최종 예측 데이터 생성
  - [Fig2]
    - Convolution Layer의 output과 LSTM의 마지막 step의 output으로 attention vector 생성 후 nomalize
    - nomalize된 attention vector를 LSTM의 각 step의 output에 element wise하게 multiply
