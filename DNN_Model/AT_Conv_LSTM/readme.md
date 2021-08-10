@@ -29,10 +29,10 @@
      - Bi-LSTM Input : 일별 패턴
      - bi-LSTM input : 주별 패턴
    - 각 module의 output을 concat하고, FF Layer 걸쳐 최종 예측 데이터 생성
- - [Fig2]
-   ![image](https://user-images.githubusercontent.com/87812424/128891404-1eb2113d-8d1b-4d93-a9d3-ee571b416568.png)
-   ![image](https://user-images.githubusercontent.com/87812424/128891439-ce3e257c-baab-4c49-9867-af6d086f8529.png)
-   ![image](https://user-images.githubusercontent.com/87812424/128891468-4c43d28e-991f-477a-b9fb-de001075a1df.png)
+ - [Fig2] </br> 
+   ![image](https://user-images.githubusercontent.com/87812424/128891404-1eb2113d-8d1b-4d93-a9d3-ee571b416568.png) </br> 
+   ![image](https://user-images.githubusercontent.com/87812424/128891439-ce3e257c-baab-4c49-9867-af6d086f8529.png) </br> 
+   ![image](https://user-images.githubusercontent.com/87812424/128891468-4c43d28e-991f-477a-b9fb-de001075a1df.png) </br> 
 
    - attention vector
      - Convolution Layer의 output -> shape (None, 15, 105)
