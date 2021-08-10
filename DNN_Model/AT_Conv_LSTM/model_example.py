@@ -30,15 +30,15 @@ class AttentionLayer(Layer):
         super(AttentionLayer, self).build(input_shape)
 
     def call(self, inputs):
-        # inputs.shape = (batch_size, time_steps, seq_len)
         x1 = K.permute_dimensions(inputs[0], (0, 1))
         x2 = K.permute_dimensions(inputs[1][:,-1,:], (0, 1))
-        # x.shape = (batch_size, seq_len, time_steps)
+
         a = K.softmax(K.tanh(K.dot(x1, self.W_query)+ K.dot(x2, self.W_key)))
         a = K.dot(a, self.W_value)
         outputs = K.permute_dimensions(a * x1, (0, 1))
-        # outputs = K.sum(outputs, axis=1)
+       
         outputs = K.l2_normalize(outputs, axis=1)
+        
         return outputs
 
     def compute_output_shape(self, input_shape):
