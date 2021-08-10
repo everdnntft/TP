@@ -56,8 +56,8 @@ con_out = TimeDistributed(Flatten())(con2)
 lstm_out1 = LSTM(15, return_sequences=True, name='lstm_1')(con_out)
 lstm_out2 = LSTM(15, return_sequences=True, name='lstm_2')(lstm_out1)
 attention_vector = AttentionLayer()([lstm_out2[:, -1, :], con_out])
-attention_out = Multiply(name='Multiply')([attention_vector, lstm_out2])
-attention_out = tf.reduce_sum(attention_out, axis=1)
+attention_hidden = Multiply(name='Multiply')([attention_vector, lstm_out2])
+conv_lstm_out = tf.reduce_sum(attention_hidden, axis=1)
 
 
 # Bilstm
@@ -69,7 +69,7 @@ auxiliary_input_d = Input((30, 1), name='auxiliary_input_d')
 lstm_outd1 = Bidirectional(LSTM(15, return_sequences=True))(auxiliary_input_d)
 lstm_outd2 = Bidirectional(LSTM(15, return_sequences=False))(lstm_outd1)
 
-x = keras.layers.concatenate([attention_out, lstm_outw2, lstm_outd2])
+x = keras.layers.concatenate([conv_lstm_out, lstm_outw2, lstm_outd2])
 x = Dense(20, activation='relu')(x)
 x = Dense(10, activation='relu')(x)
 main_output = Dense(1, activation='relu', kernel_regularizer=keras.regularizers.l1_l2(0.1, 0.1), name='main_output')(x)
