@@ -9,12 +9,13 @@
  - Code URL
    - https://github.com/suprobe/AT-Conv-LSTM
 
-
+</br>
 
 ### 2. 개요
  - Traffic Frocasting을 위하여, [속도, 일별 패턴, 주별 패턴] 데이터를 사용하여, 미래 Traffic을 예측합니다.
    - 1DCNN, LSTM, Attention  
 
+</br>
 
 ### 3. 모델 구조
 ![image](https://user-images.githubusercontent.com/87812424/128858004-b4dbdac8-aed0-4481-97df-cb506acfd0cc.png)
