@@ -30,20 +30,20 @@ class AttentionLayer(Layer):
         super(AttentionLayer, self).build(input_shape)
 
     def call(self, inputs):
-        x1 = K.permute_dimensions(inputs[0], (0, 1))
-        x2 = K.permute_dimensions(inputs[1][:,-1,:], (0, 1))
+        x1 = inputs[0]
+        x2 = inputs[1]
 
-        a = K.softmax(K.tanh(K.dot(x1, self.W_query) + K.dot(x2, self.W_key)))
+        a = K.softmax(K.tanh(K.dot(x1, self.W_query)+ K.dot(x2, self.W_key)))
         a = K.dot(a, self.W_value)
-        outputs = K.permute_dimensions(a * x1, (0, 1))
+        outputs = a * x1
        
         outputs = K.l2_normalize(outputs, axis=1)
         
         return outputs
 
     def compute_output_shape(self, input_shape):
-        return input_shape[0][0], input_shape[0][1]
-
+        return input_shape[0][0], input_shape[0][1], input_shape[0][2]
+    
 # Conv_lstm
 main_input = Input((15, 7, 1),name='main_input')
 con1 = TimeDistributed(Conv1D(filters=15, kernel_size=3, padding='same', activation='relu', strides=1))(main_input)
@@ -52,8 +52,8 @@ con2 = TimeDistributed(Conv1D(filters=15, kernel_size=3, padding='same', activat
 con_out = TimeDistributed(Flatten())(con2)
 
 lstm_out1 = LSTM(15, return_sequences=True, name='lstm_1')(con_out)
-lstm_out2 = LSTM(15, return_sequences=True, name='lstm_2')(lstm_out1)
-attention_vector = AttentionLayer()([lstm_out2[:, -1, :], con_out])
+lstm_out2 = LSTM(15, return_sequences=True, name='lstm_2')(lstm_out1) # (None, 15, 15)
+attention_vector = AttentionLayer()([lstm_out2,  con_out]) # (None, 15, 15), (none, 15, 105)
 attention_hidden = Multiply(name='Multiply')([attention_vector, lstm_out2])
 conv_lstm_out = tf.reduce_sum(attention_hidden, axis=1)
 
