@@ -47,6 +47,7 @@ class AttentionLayer(Layer):
     def compute_output_shape(self, input_shape):
         return input_shape[0][0], input_shape[0][1]
 
+# conv_lstm
 main_input = Input((15, 7, 1),name='main_input')
 con1 = TimeDistributed(Conv1D(filters=15, kernel_size=3, padding='same', activation='relu', strides=1))(main_input)
 con2 = TimeDistributed(Conv1D(filters=15, kernel_size=3, padding='same', activation='relu', strides=1))(con1)
