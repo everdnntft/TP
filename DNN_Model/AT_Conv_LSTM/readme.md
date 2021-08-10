@@ -6,8 +6,6 @@
 ### 1. 자료
  - 논문 URL
    - https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9112272&casa_token=vQ8j3mkO3AoAAAAA:2JJEJL37JmL9c33c0Ke1VxwqQoTmDjB-7DdMJycibMVV3-PzpSh1yTpqg97K7K8UbZd7UpwijaiQ
- - Code URL
-   - https://github.com/suprobe/AT-Conv-LSTM
 
 </br>
 
