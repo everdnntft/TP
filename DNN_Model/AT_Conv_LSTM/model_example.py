@@ -44,14 +44,14 @@ class AttentionLayer(Layer):
     
 # Conv_lstm
 main_input = Input((15, 7, 1),name='main_input')
-con1 = TimeDistributed(Conv1D(filters=15, kernel_size=3, padding='same', activation='relu', strides=1))(main_input)
-con2 = TimeDistributed(Conv1D(filters=15, kernel_size=3, padding='same', activation='relu', strides=1))(con1)
+con1 = TimeDistributed(Conv1D(filters=10, kernel_size=3, padding='same', activation='relu', strides=1))(main_input)
+con2 = TimeDistributed(Conv1D(filters=10, kernel_size=3, padding='same', activation='relu', strides=1))(con1)
 #con3 = TimeDistributed(AveragePooling1D(pool_size=2))(con2)
 con_out = TimeDistributed(Flatten())(con2)
 
 lstm_out1 = LSTM(15, return_sequences=True, name='lstm_1')(con_out)
 lstm_out2 = LSTM(15, return_sequences=True, name='lstm_2')(lstm_out1) # (None, 15, 15)
-attention_vector = AttentionLayer()([lstm_out2,  con_out]) # (None, 15, 15), (none, 15, 105)
+attention_vector = AttentionLayer()([lstm_out2,  con_out]) # (None, 15, 15), (none, 15, 70)
 attention_hidden = Multiply(name='Multiply')([attention_vector, lstm_out2])
 conv_lstm_out = tf.reduce_sum(attention_hidden, axis=1)
 
