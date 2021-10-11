@@ -18,7 +18,7 @@ from tensorflow.keras import layers
 
 input = layers.Input(shape=(5, )) # input 개수: 5개
 hidden = layers.Dense(32, activation="relu")(input) # output 개수: 32개 -> Units 개수
-output = layers.Dense(1, activation="relu")(hidden) # output 개수: 1개 -> Units 개수
+output = layers.Dense(1)(hidden) # output 개수: 1개 -> Units 개수
 
 model = keras.Model(inputs=input, outputs=output)
 </code>
@@ -44,3 +44,20 @@ CNN은 위 그림과 같이 Kernel이란 shared weight를 가지고 있으며, K
 * 이미지는 인접한 공간에 대한 연관성을 가지 데이터이다.
 * 이러한 공간적 연관성을 Kernel이란 Weight를 통해 stride만큼 이동하며 분석한다.
 * 완전연결이 아니기에, 파라미터 개수 또한 줄일 수 있다.
+
+아래는 (32, 32, 3) 이미지를 입력으로 받아, <br/> 개와 고양이를 분류하는 단순한 예제이다.
+<pre>
+<code>
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+
+input = layers.Input(shape=(32, 32, 3)) # (32, 32) 크기의 이미지 (3은 RGB)
+hidden = layers.Conv2D(32, kernel_size=(5, 5), strides=(1, 1), padding='same', activation='relu')(input)
+fc_layer = layers.Flatten()(hidden)
+fc_layer = layers.Dense(32, activation='relu')(fc_layer)
+output = layers.Dense(2)(fc_layer, activation='softmax') # 분류를 위해 softmax 사용
+
+model = keras.Model(inputs=input, outputs=output)
+</code>
+</pre>
