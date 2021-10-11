@@ -26,6 +26,8 @@ model = keras.Model(inputs=input, outputs=output)
 
 
 
+
+
 # 2. CNN (합성곱신경망, Convolution Neural Network)
 
 * Convolution은 이미지 분석에 큰 성과를 이뤄냈다.
