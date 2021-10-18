@@ -179,7 +179,7 @@ model = keras.Model(inputs=input, outputs=output)
 
 <img src="https://user-images.githubusercontent.com/87812424/137658474-8d9f4438-af2b-4160-8aab-dd6742614fa5.PNG" width="50%" height="50%"/>
 
-#### 𝑓(𝐻<sub>𝑖</sub>, 𝐴)=𝜎(𝐷<sup>−1</sup>𝐴𝐻<sub>𝑖</sub>𝑊<sub>𝑖</sub>)
+### 𝑓(𝐻<sub>𝑖</sub>, 𝐴)=𝜎(𝐷<sup>−1</sup>𝐴𝐻<sub>𝑖</sub>𝑊<sub>𝑖</sub>)
 * D: Node의 연결 수가 많은 Node일수록 값이 값이 커지는 현상을 방지하기 위하여, D<sup>-1</sup> Matrix를 곱해준다.
 * A: 인접행렬로 각 Node 연결정보(Graph)를 담은 Matrix   
 * H: 각 Node별 특징 데이터를  Matrix
