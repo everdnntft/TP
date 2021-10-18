@@ -174,6 +174,9 @@ model = keras.Model(inputs=input, outputs=output)
 * 소셜네트워크, 교통정보(Link, Segment) 등과 같이 유크리드 좌표계에 표현하기 어려운 데이터를 Graph 구조로 표현하여 학습
 * 각 노드간의 관계를 연관지어 신뢰도 높은 관계 데이터를 도출 할 수 있다.
 
+<img src="https://user-images.githubusercontent.com/87812424/137658462-6ed0c812-8285-4ad8-ad4a-6226c8b3f98b.PNG" width="50%" height="50%"/>
+
+<img src="https://user-images.githubusercontent.com/87812424/137658474-8d9f4438-af2b-4160-8aab-dd6742614fa5.PNG" width="50%" height="50%"/>
 
 𝑓(𝐻<sub>𝑖</sub>,𝐴)=𝜎(𝐷<sup>−1</sup>𝐴𝐻<sub>𝑖</sub>𝑊<sub>𝑖</sub>)
 
