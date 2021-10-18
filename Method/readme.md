@@ -99,10 +99,47 @@ model = keras.Model(inputs=input, outputs=output)
 </code>
 </pre>
 
+
 ## LSTM
+
+* 장기 의존성 문제(the problem of Long-Term Dependencies) </br>
+  - 예측의 가장 중요한 정보가 시점의 앞쪽에 존재할 수 있다.
+  - RNN은 충분한 기억능력을 가지지 못하기 때문에, 긴 Sequnce에서 엉뚱한 결과가 나올 수 있다.
+
 <img src="https://user-images.githubusercontent.com/87812424/137650007-4e53043a-cb56-408b-aa63-20e99f5dd2bf.png" width="60%" height="60%"/>
 
+* Input Gate</br>
+  ![input](https://user-images.githubusercontent.com/87812424/137650844-3044e6b3-bdab-406f-9720-b1e196bf824e.png)
+  - x<sub>t</sub>를 무조건적 수용이 아니라 적절히 선택하는 역할
+* Output Gate</br>
+  ![out](https://user-images.githubusercontent.com/87812424/137650883-80e91112-6b45-48da-82fe-05d7798c554c.png)
+  - Next Timestamp에 현재의 출력이 얼마나 중요한지 조정하는 역할
+* Forget Gate</br>
+  ![forget](https://user-images.githubusercontent.com/87812424/137650889-632d81a4-398b-4e81-8401-8fee2c2bb3ca.png)
+  - C<sub>t-1</sub>의 기억 중에서 불필요한 기억을 잊게 해주는 역할
 
+<pre>
+<code>
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+
+input = layers.Input(shape=(12, 32)) # (12, 5) 과거12개, 각각 5개의 Feature를 가진 데이터 
+rnn = layers.LSTM(32)(input) # (32, )
+output = layers.Dense(1)(rnn) # 미래 1개 예측
+
+model = keras.Model(inputs=input, outputs=output)
+</code>
+</pre>
+
+
+## GRU
+
+* LSTM의 장기의존성문제에 대한 해결책을 유지하면서, Hidden State를 업데이트하는 계산량을 줄이면서,
+* 성능은 LSTM과 유사한 모델
+
+
+![GRU](https://user-images.githubusercontent.com/87812424/137651233-51fc4cf1-4494-4fb4-8e02-b576b9122c73.png)
 
 
 
