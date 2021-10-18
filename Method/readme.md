@@ -135,8 +135,7 @@ model = keras.Model(inputs=input, outputs=output)
 
 ## GRU
 
-* LSTM의 장기의존성문제에 대한 해결책을 유지하면서, Hidden State를 업데이트하는 계산량을 줄이면서,
-* 성능은 LSTM과 유사한 모델
+* LSTM의 장기의존성문제에 대한 해결책을 유지하면서, Hidden State를 업데이트하는 계산량을 줄이면서, 성능은 LSTM과 유사한 모델
 
 <img src="https://user-images.githubusercontent.com/87812424/137651233-51fc4cf1-4494-4fb4-8e02-b576b9122c73.png" width="60%" height="60%"/>
 
