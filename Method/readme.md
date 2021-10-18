@@ -168,3 +168,9 @@ model = keras.Model(inputs=input, outputs=output)
 
 
 
+
+# 4. GCN (그래프컨볼루션신경망, Convolution Neural Network)
+
+
+
+
