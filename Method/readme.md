@@ -170,7 +170,7 @@ model = keras.Model(inputs=input, outputs=output)
 
 </br></br>
 # 4. GCN (그래프컨볼루션신경망, Convolution Neural Network)
-
+𝑓(𝐻<sub>𝑖</sub>,𝐴)=𝜎(𝐷<sup>−1</sup>𝐴𝐻<sub>𝑖</sub>𝑊<sub>𝑖</sub>)
 
 
 
