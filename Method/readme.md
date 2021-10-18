@@ -185,4 +185,9 @@ model = keras.Model(inputs=input, outputs=output)
 * H: 각 Node별 특징 데이터를  Matrix
 * W: 학습 Weight
 
+<pre>
+<code>
+
+</code>
+</pre>
 
