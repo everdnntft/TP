@@ -113,7 +113,7 @@ model = keras.Model(inputs=input, outputs=output)
   - x<sub>t</sub>를 무조건적 수용이 아니라 적절히 선택하는 역할
 * Output Gate</br>
   ![out](https://user-images.githubusercontent.com/87812424/137650883-80e91112-6b45-48da-82fe-05d7798c554c.png)
-  - Next Timestamp에 현재의 출력이 얼마나 중요한지 조정하는 역할
+  - Next Timestep에 현재의 출력이 얼마나 중요한지 조정하는 역할
 * Forget Gate</br>
   ![forget](https://user-images.githubusercontent.com/87812424/137650889-632d81a4-398b-4e81-8401-8fee2c2bb3ca.png)
   - C<sub>t-1</sub>의 기억 중에서 불필요한 기억을 잊게 해주는 역할
