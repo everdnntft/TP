@@ -233,7 +233,7 @@ class GCN(Layer):
         assert len(features_shape) == 2
         input_dim = features_shape[1]
         
-        # 업데이트 
+        # 업데이트 예정
 
         self.kernel = self.add_weight(shape=(input_dim * self.support,
                                              self.units),
