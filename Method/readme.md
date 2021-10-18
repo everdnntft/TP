@@ -141,10 +141,10 @@ model = keras.Model(inputs=input, outputs=output)
 <img src="https://user-images.githubusercontent.com/87812424/137651233-51fc4cf1-4494-4fb4-8e02-b576b9122c73.png" width="60%" height="60%"/>
 
 * Reset Gate </br>
-![reset](https://user-images.githubusercontent.com/87812424/137651583-aa3c7406-b863-41e0-8f9b-999c0f89fa3d.png)
+  <img src="https://user-images.githubusercontent.com/87812424/137651583-aa3c7406-b863-41e0-8f9b-999c0f89fa3d.png" width="20%" height="20%"/>
   - 이전 정보를 얼마나 잊어야하는지 결정하는 역할
 * Update Gate </br>
-![update](https://user-images.githubusercontent.com/87812424/137651591-cf4ab0f3-993b-4f40-b0cb-ce909436be5c.png)
+  <img src="https://user-images.githubusercontent.com/87812424/137651591-cf4ab0f3-993b-4f40-b0cb-ce909436be5c.png" width="20%" height="20%"/>
   - 이전 정보를 얼마나 통과시킬지 결정하는 역할
 
 
