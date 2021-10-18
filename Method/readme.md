@@ -160,5 +160,11 @@ model = keras.Model(inputs=input, outputs=output)
 </code>
 </pre>
 
+## LSTM(GRU) + Attention
+
+* Query, Key, Value를 중점으로 아래 URL 참조
+  - https://wikidocs.net/22893
+
+
 
 
