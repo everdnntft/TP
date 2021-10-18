@@ -170,6 +170,11 @@ model = keras.Model(inputs=input, outputs=output)
 
 </br></br>
 # 4. GCN (그래프컨볼루션신경망, Convolution Neural Network)
+
+* 소셜네트워크, 교통정보(Link, Segment) 등과 같이 유크리드 좌표계에 표현하기 어려운 데이터를 Graph 구조로 표현하여 학습
+* 각 노드간의 관계를 연관지어 신뢰도 높은 관계 데이터를 도출 할 수 있다.
+
+
 𝑓(𝐻<sub>𝑖</sub>,𝐴)=𝜎(𝐷<sup>−1</sup>𝐴𝐻<sub>𝑖</sub>𝑊<sub>𝑖</sub>)
 
 
