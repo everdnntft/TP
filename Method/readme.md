@@ -147,5 +147,19 @@ model = keras.Model(inputs=input, outputs=output)
   <img src="https://user-images.githubusercontent.com/87812424/137651591-cf4ab0f3-993b-4f40-b0cb-ce909436be5c.png" width="20%" height="20%"/>
   - 이전 정보를 얼마나 통과시킬지 결정하는 역할
 
+<pre>
+<code>
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+
+input = layers.Input(shape=(12, 32)) # (12, 5) 과거12개, 각각 5개의 Feature를 가진 데이터 
+rnn = layers.GRU(32)(input) # (32, )
+output = layers.Dense(1)(rnn) # 미래 1개 예측
+
+model = keras.Model(inputs=input, outputs=output)
+</code>
+</pre>
+
 
 
