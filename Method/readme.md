@@ -232,8 +232,6 @@ class GCN(Layer):
         features_shape = input_shapes[0]
         assert len(features_shape) == 2
         input_dim = features_shape[1]
-        
-        # 업데이트 예정
 
         self.kernel = self.add_weight(shape=(input_dim * self.support,
                                              self.units),
@@ -254,7 +252,9 @@ class GCN(Layer):
     def call(self, inputs, mask=None):
         D, A, H = inputs
 
-        # 업데이트 예정
+        output = K.dot(D, A)
+        output = K.dot(output, H)
+        output = k.dot(output, self.kernel)
 
         if self.bias:
             output += self.bias
