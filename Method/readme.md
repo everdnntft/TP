@@ -27,7 +27,7 @@ model = keras.Model(inputs=input, outputs=output)
 
 
 
-
+</br></br>
 # 2. CNN (합성곱신경망, Convolution Neural Network)
 
 * Convolution은 이미지 분석에 큰 성과를 이뤄냈다.
@@ -65,7 +65,7 @@ model = keras.Model(inputs=input, outputs=output)
 
 
 
-
+</br></br>
 # 3. RNN, LSTM, GRU (순환신경망)
 
 * 자연어, 주식 등 순서가 있는 연속적인 시계열 데이터 학습에 적합한 모델이다.
@@ -168,7 +168,7 @@ model = keras.Model(inputs=input, outputs=output)
 
 
 
-
+</br></br>
 # 4. GCN (그래프컨볼루션신경망, Convolution Neural Network)
 
 
