@@ -138,8 +138,14 @@ model = keras.Model(inputs=input, outputs=output)
 * LSTM의 장기의존성문제에 대한 해결책을 유지하면서, Hidden State를 업데이트하는 계산량을 줄이면서,
 * 성능은 LSTM과 유사한 모델
 
+<img src="https://user-images.githubusercontent.com/87812424/137651233-51fc4cf1-4494-4fb4-8e02-b576b9122c73.png" width="60%" height="60%"/>
 
-![GRU](https://user-images.githubusercontent.com/87812424/137651233-51fc4cf1-4494-4fb4-8e02-b576b9122c73.png)
+* Reset Gate </br>
+![reset](https://user-images.githubusercontent.com/87812424/137651583-aa3c7406-b863-41e0-8f9b-999c0f89fa3d.png)
+  - 이전 정보를 얼마나 잊어야하는지 결정하는 역할
+* Update Gate </br>
+![update](https://user-images.githubusercontent.com/87812424/137651591-cf4ab0f3-993b-4f40-b0cb-ce909436be5c.png)
+  - 이전 정보를 얼마나 통과시킬지 결정하는 역할
 
 
 
