@@ -38,7 +38,7 @@ CNN은 위와 같은 단점을 보완하면서 이미지 분석을 효율적으�
 
 <img src="https://user-images.githubusercontent.com/87812424/136781126-ffabc83e-1441-43e8-a305-1734df428cc6.png" width="50%" height="50%"/>
 
-CNN은 위 그림과 같이 Kernel이란 shared weight를 가지고 있으며, Kernel이 이동하면서 Feature map이 하나씩 채워진다.
+CNN은 위 그림과 같이 Kernel이라는 shared weight를 가지고 있으며, Kernel이 이동하면서 Feature map이 하나씩 채워진다.
 (Kernel은 1개 Chennel에 대해서만 공유된다. filter(output chennel)개수가 10개라면 kernel은 10개 존재한다.)
 정리하면 다음과 같다.
 * 이미지는 인접한 공간에 대한 연관성을 가지 데이터이다.
@@ -56,8 +56,53 @@ input = layers.Input(shape=(32, 32, 3)) # (32, 32) 크기의 이미지 (3은 RGB
 hidden = layers.Conv2D(32, kernel_size=(5, 5), strides=(1, 1), padding='same', activation='relu')(input)
 fc_layer = layers.Flatten()(hidden)
 fc_layer = layers.Dense(32, activation='relu')(fc_layer)
-output = layers.Dense(2)(fc_layer, activation='softmax') # 분류를 위해 softmax 사용
+output = layers.Dense(2, activation='softmax')(fc_layer) # 분류를 위해 softmax 사용
 
 model = keras.Model(inputs=input, outputs=output)
 </code>
 </pre>
+
+
+
+
+
+# 2. RNN, LSTM, GRU (순환신경망)
+
+* 자연어, 주식 등 순서가 있는 연속적인 시계열 데이터 학습에 적합한 모델이다.
+* 쉽게 D<sub>t-1</sub>는 D<sub>t</sub>에 영향을 주기 때문에 이를 반영한 구조가 순환신경망이다. 
+
+<img src="https://user-images.githubusercontent.com/87812424/137648897-85e9d5e0-bd6b-4474-9418-b721bdcc3542.jpg" width="70%" height="70%"/>
+
+
+## RNN
+<img src="https://user-images.githubusercontent.com/87812424/137648847-8dc6a6de-2296-4956-9dd0-d3668e0322f8.png" width="60%" height="60%"/>
+
+* h<sub>t</sub> = tanh(W<sub>x</sub>x<sub>t</sub> + W<sub>h</sub>h<sub>t-1</sub> + bais)
+* Shape 예시 및 설명</br>
+  x : (i, j) , Input 데이터로 m은 timeStamp 수, n은 각 step에 들어갈 Feature 수</br>
+  W<sub>x</sub> : (j, n), 학습 가능한 Weight </br>
+  W<sub>h</sub> : (n, n), 학습 가능한 Weight </br>
+  bais : (n, ), 편향
+* 위 수식과 같이 현재의 결과(hidden == ouput)를 추출하기 위해 이전 결과를 사용한다.
+
+<pre>
+<code>
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+
+input = layers.Input(shape=(12, 32)) # (12, 5) 과거12개, 각각 5개의 Feature를 가진 데이터 
+rnn = layers.SimpleRNN(32)(input) # (32, )
+output = layers.Dense(1)(rnn) # 미래 1개 예측
+
+model = keras.Model(inputs=input, outputs=output)
+</code>
+</pre>
+
+## LSTM
+<img src="https://user-images.githubusercontent.com/87812424/137650007-4e53043a-cb56-408b-aa63-20e99f5dd2bf.png" width="60%" height="60%"/>
+
+
+
+
+
