@@ -175,7 +175,7 @@ model = keras.Model(inputs=input, outputs=output)
 * 각 노드간의 관계를 연관지어 신뢰도 높은 관계 데이터를 도출 할 수 있다.
 * 위와 같은 Grahp특징과 Convolution을 결합한 것이 GCN이다.
 
-<img src="https://user-images.githubusercontent.com/87812424/137658462-6ed0c812-8285-4ad8-ad4a-6226c8b3f98b.PNG" width="50%" height="50%"/>
+<img src="https://user-images.githubusercontent.com/87812424/137660923-9b8bdf98-2d9a-4409-bb40-e8acf5c52f83.png" width="50%" height="50%"/>
 
 <img src="https://user-images.githubusercontent.com/87812424/137658474-8d9f4438-af2b-4160-8aab-dd6742614fa5.PNG" width="50%" height="50%"/>
 
