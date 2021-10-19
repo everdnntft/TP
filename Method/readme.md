@@ -254,7 +254,7 @@ class GCN(Layer):
 
         output = K.dot(D, A)
         output = K.dot(output, H)
-        output = k.dot(output, self.kernel)
+        output = K.dot(output, self.kernel)
 
         if self.bias:
             output += self.bias
