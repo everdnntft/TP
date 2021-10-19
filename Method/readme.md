@@ -207,7 +207,7 @@ class GCN(Layer):
                  **kwargs):
         if 'input_shape' not in kwargs and 'input_dim' in kwargs:
             kwargs['input_shape'] = (kwargs.pop('input_dim'),)
-        super(GraphConvolution, self).__init__(**kwargs)
+        super(GCN, self).__init__(**kwargs)
         self.units = units
         self.activation = activations.get(activation)
         self.use_bias = use_bias
@@ -280,7 +280,7 @@ class GCN(Layer):
                   'bias_constraint': constraints.serialize(self.bias_constraint)
         }
 
-        base_config = super(GraphConvolution, self).get_config()
+        base_config = super(GCN, self).get_config()
         return dict(list(base_config.items()) + list(config.items()))
 </code>
 </pre>
