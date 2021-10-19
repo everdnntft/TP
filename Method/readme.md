@@ -256,7 +256,7 @@ class GCN(Layer):
         output = K.dot(output, H)
         output = K.dot(output, self.kernel)
 
-        if self.bias:
+        if self.use_bias:
             output += self.bias
         return self.activation(output)
 
