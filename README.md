@@ -1,7 +1,8 @@
 # TP (Traffic Prediction)
+![image](https://user-images.githubusercontent.com/87812424/140465286-25b4f3d4-5ea3-4c18-926b-111535259906.png)
 
-![image](https://user-images.githubusercontent.com/87812424/140464331-97c05f90-e035-4493-81fb-5e7e7ab3b990.png)
-
+</br>
+</br>
 </br>
 <table>
     <thead>
