@@ -9,7 +9,6 @@ DataSet URL : https://github.com/liyaguang/DCRNN/tree/master/data/sensor_graph
 
 </br>
 </br>
-</br>
 <table>
     <thead>
         <tr>
