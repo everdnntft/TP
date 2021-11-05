@@ -6,8 +6,9 @@
 <table>
     <thead>
         <tr>
-            <th colspan=2>모델명(Method)</th>
-            <th>사용 기법</th>
+            <th colspan=3>모델(Method)</th>
+            <th>설명</th>
+            <th>논문></th>
         </tr>
     </thead>
     <tbody>
