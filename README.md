@@ -19,7 +19,7 @@ DataSet URL : https://github.com/liyaguang/DCRNN/tree/master/data/sensor_graph
     </thead>
     <tbody>
         <tr>
-            <td colspan=3>TSE-SE</td>
+            <td colspan=3>TSE-SC</td>
             <td>GCN + Transformer</td>
             <td>Traffic transformer: Capturing the continuity and periodicity of time series for traffic forecasting (2020), Trans-GIS</td>
         </tr>
